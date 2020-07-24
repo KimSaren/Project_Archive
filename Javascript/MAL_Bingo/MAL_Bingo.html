@@ -1,0 +1,128 @@
+<!doctype html>
+<head>
+    <meta charset = "utf-8">
+    <meta author = "Kim Saren">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- BootStrap CSS-->
+    <link rel = "stylesheet" href = "css/bootstrap.css">
+    <!-- Own CSS -->
+    <link rel = "stylesheet" href = "css/styles.css">
+    <title>Bing_Bong_Bingo</title>
+</head>
+<body>
+    <nav>
+        <div class = "header">
+            <img src = "images/umr1h.png" class ="head"><h1 class = "header-text"><u>Bing Bong Bingo</u></h1><img src = "images/umr2h.png" class ="head">
+        </div> 
+    </nav>
+    <div class = "content">
+        <div class = "item1">
+            <div class = information-field>
+                <h2 id = "information-header"><u><b>General information</b></u></h2>
+                <p class = "information-paragraph">To fill your bingo sheet, simply choose a cell and start typing on the searchbar. 
+                    Selecting an option presented in the list will fill the cell with the corresponding selection.</p>
+                <p class = "information-paragraph">The currently selected tile will be highligted as red. Clicking the tile again will undo your selection. Please note that you cannot change the "free space" in the middle.</p>
+                <p class = "information-paragraph">Use the buttons below to help you format your table and start the game when you feel ready.</p>
+                <p class = "information-paragraph hidden">To play the game, simply click on a cell to mark it as crossed. Click it again to uncross it. Each consistent horizontal, vertical or diagonal line of crosses will count as a bingo. The free space in the middle can always be crossed.</p>
+                <p class = "information-paragraph hidden">You can use the button below to return back to filling the bingo sheet. Note, however, that this will reset your current progress.</p>
+                <p class = "information-paragraph hidden">Have fun!</p>
+            </div>
+            <div class = "buttons">
+                <button type = "button" id = "clear">Clear</button>
+                <button type = "button" id = "random">Randomize</button>
+                <button type = "button" id = "play">Play</button>
+                <button type = "button" id = "sheet" class = "hidden">Sheet</button>
+            </div>
+            <div id = "bingo-lines" class = "hidden">
+                <div id = "bingo-header">
+                    <h4><b><u>Bingo lines</u></b></h4>
+                </div>
+                <div id = "b1" class = "bingo-items">
+                    <p class = "bingo-options">1-5</p>
+                    <p class = "bingo-options">6-10</p>
+                    <p class = "bingo-options">11-15</p>
+                    <p class = "bingo-options">16-20</p>
+                </div>
+                <div id = "b2" class = "bingo-items">
+                    <p class = "bingo-options">21-25</p>
+                    <p class = "bingo-options">1,6,11,16,21</p>
+                    <p class = "bingo-options">2,7,12,17,22</p>
+                    <p class = "bingo-options">3,8,13,18,23</p>
+                </div>
+                <div id = "b3" class = "bingo-items">
+                    <p class = "bingo-options">4,9,14,19,24</p>
+                    <p class = "bingo-options">5,10,15,20,25</p>
+                    <p class = "bingo-options">1,7,13,19,25</p>
+                    <p class = "bingo-options">5,9,13,17,21</p>
+                </div>
+                <div id = "total-div">
+                    <p id = "total">Total: 0</p>
+                </div>
+            </div>
+        </div>
+        <div class = "item2">
+            <form name = "anime-search" id = "anime-search">
+                <label for = "searchbar" class = "item">Title search:</label>
+                <input type = "text" id = "searchbar" list = "searchresults">
+                <datalist id = "searchresults"></datalist>
+            </form>
+            <div id = "bingo-notifications" class = "hidden">
+                <p id = "bingo-notices"></p>
+            </div>
+            <div class="table-responsive">
+                <table id="bingo" class = "initializer">
+                    <tbody>
+                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td></td><td></td><td id = "reserved"><div class = "text-container"><img src = "images/umr.jpg" class = "image1"><div class = "top-left rainbow">13.</div></div></td><td></td><td></td></tr>
+                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class = "item3">
+            <div class = "notices"><p class = "notifications"></p></div>
+            <div class = "list-items">
+                <div>
+                    <h3><b><u>Selected series</u></b></h3>
+                </div>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li id = "reserved" class = "rainbow">Free space</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id = "author">
+            <p class = "emphasize">Kim "sinritt" Sarén</p>
+            <p class = "emphasize"><a href="mailto:kimi.saren@gmail.com">kimi.saren@gmail.com</a></p>
+        </div>
+    </footer>
+    <!-- Own JavaScript -->
+    <script src = "js/MAL_Bingo.js" id = "initialize"></script>
+</body>

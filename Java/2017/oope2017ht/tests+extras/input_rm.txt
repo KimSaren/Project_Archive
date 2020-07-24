@@ -1,0 +1,57 @@
+mf input_mf.txt 213
+mf OmaListaTesti.java 7341
+mf HakemistoTesti.java 10300
+mf TietoTesti.java 6914
+md apulaiset
+cd apulaiset
+mf In.java 5611
+mf Komennettava.java 1923
+mf Ooperoiva.java 2890
+cd ..
+md fi
+cd fi
+md uta
+cd uta
+md csjola
+cd csjola
+md oope
+cd oope
+md lista
+cd lista
+mf AbstraktiLista.java 2635
+mf LinkitettyLista.java 8742
+mf Lista.java 2910
+mf Solmu.java 1460
+cd
+mf input_ls.txt 544
+mf output_ls.txt 917
+md temp
+ls
+rm OmaListaTesti.java
+ls
+rm HakemistoTesti.java
+rm TietoTesti.java
+rm temp
+ls
+rm apulaiset
+ls
+cd fi
+cd uta
+cd csjola
+cd oope
+cd lista
+ls
+rm Solmu.java
+ls
+cd ..
+ls
+rm lista
+ls
+cd
+rm fi
+ls
+rm input_ls.txt
+rm input_mf.txt
+rm output_ls.txt
+ls
+exit

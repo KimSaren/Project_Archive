@@ -1,0 +1,15 @@
+mf c.txt 1
+mf a.txt 2
+mf b.txt 3
+ls
+mf Fubar.java 123456
+mf TestIt2.java 100
+ls
+mf Tampere_New_University.exe 3
+mf tampere_new_university.exe 3
+ls
+mf 42.dll 42
+mf .login 986
+mf 2edgy4me 666
+ls
+exit

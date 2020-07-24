@@ -1,0 +1,1 @@
+A simple calculator program I did as an excercise in React.JS components

@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+    <meta charset = "utf-8">
+    <meta author = "Kim Saren">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel = "stylesheet" href = "styles.css">
+    <title>MAL Search</title>
+</head>
+<body>
+    <main id = "container">
+        <h1>Title search for MyAnimeList series</h1>
+    </main>
+    <form name = "anime-search" id = "anime-search">
+        <label for = "searchbar" class = "item">Title of the series:</label>
+        <input type = "text" id = "searchbar" list = "searchresults">
+        <datalist id = "searchresults"></datalist>
+    </form>
+    <section>
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+            <table class="table table-bordered table-striped mb-0" id="stats">
+                <thead>
+                    <tr>
+                        <th class = "title">Title</th>
+                        <th class = "image">Image</th>
+                        <th class = "synopsis">Synopsis</th>
+                    </tr>
+                </thead>
+                <tbody id = "tbody">
+                </tbody>
+            </table>
+        </div>
+        <div id = "myModal" class = "modal">
+            <span class = "close">&times;</span>
+            <img class = "modal-content" id = "img01">
+            <div id = "caption"></div>
+        </div>
+    </section>
+    <script src = "MAL_Search.js"></script>
+</body>

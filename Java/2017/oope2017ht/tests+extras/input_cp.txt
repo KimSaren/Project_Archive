@@ -1,0 +1,22 @@
+mf a.txt 1
+mf s.txt 2
+mf x.txt 3
+md zzz
+ls
+cp a.txt t.txt
+ls
+cp x.txt x.txt
+ls
+cp x.txt s.txt
+ls
+cp c.txt d.txt
+ls
+cp c.txt x.txt
+ls
+cp x.txt b.txt
+ls
+cp zzz xxx
+ls
+cp b.txt zzz
+ls
+exit

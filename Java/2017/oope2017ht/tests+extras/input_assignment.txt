@@ -1,0 +1,26 @@
+md pics
+cd pics
+md cats
+cd cats
+mf ceiling_cat.gif 3677
+mf dangerous_kiten.jpg 13432
+mv dangerous_kiten.jpg dangerous_kitten.jpg
+ls
+cd ..
+md dogs
+cd dogs
+mf world's_ugliest_dog.jpg 118088
+mf worlds_ugliest_dog.jpg 118088
+cd
+ls
+md temp
+cd temp
+mf memo.txt 42
+cp memo.txt memo_backup.txt
+ls memo.txt
+ls memo_buk.txt
+ls memo_backup.txt
+rm memo.txt
+cd ..
+find
+exit

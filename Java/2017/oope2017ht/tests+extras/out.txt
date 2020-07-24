@@ -1,0 +1,27 @@
+Welcome to SOS.
+/>/>/>/>a.txt 2
+b.txt 3
+c.txt 1
+/>/>/>Fubar.java 123456
+TestIt2.java 100
+a.txt 2
+b.txt 3
+c.txt 1
+/>/>/>Fubar.java 123456
+Tampere_New_University.exe 3
+TestIt2.java 100
+a.txt 2
+b.txt 3
+c.txt 1
+tampere_new_university.exe 3
+/>/>Error!
+/>/>2edgy4me 666
+42.dll 42
+Fubar.java 123456
+Tampere_New_University.exe 3
+TestIt2.java 100
+a.txt 2
+b.txt 3
+c.txt 1
+tampere_new_university.exe 3
+/>Shell terminated.

@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+div#top {
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+}
+
+div#content {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  width: 100vw;
+}
+
+div#calculator {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  border-style: solid;
+  width: 30%;
+}
+
+div#screen {
+  font-size: 1.5rem;
+  height: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  border-style: solid;
+  background: lightskyblue;
+}
+
+div#row {
+  display: flex;
+  justify-content: center;
+  height: 15%;
+  margin-top: 5%;
+}
+
+button {
+  width: 15%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+button:nth-child(4) {
+  margin-left: 5%;
+}
+button#equals {
+  width: 30%;
+}
+
+div#footer {
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+}

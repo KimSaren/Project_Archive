@@ -1,0 +1,10 @@
+A simple C++ program that reads through multiple text documents and builds appropriate
+classes using the information provided.
+
+The program emulates a system that keeps track of NHL statistics in separate classes
+that include: the date, the player, the team, the stat, the stats and the league.
+
+The focus on this work was on storing large quantities of information appropriate classes
+using provided text files to do so. This also required rigorous usage of different string
+operations and functioning flow of information between the classes. Of course, this also
+includes proper encapsulation and hiding private information from prying eyes.

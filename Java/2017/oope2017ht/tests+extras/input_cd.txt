@@ -1,0 +1,19 @@
+md code
+cd code
+md java
+cd java
+cd
+md text
+cd text
+md quotes
+cd quotes
+cd ..
+cd ..
+md courses
+cd courses
+md oope
+cd oope
+md assignment
+cd assignment
+cd
+exit

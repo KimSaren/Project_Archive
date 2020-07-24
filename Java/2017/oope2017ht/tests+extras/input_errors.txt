@@ -1,0 +1,37 @@
+LS
+Find
+A-well-a, everybody's heard about the bird
+mf %bird.jpg 3465
+mf bird+.jpg 3465
+mf b|rd.jpg 3465
+mf .bird.jpg 3465
+mf bird.jpg -3465
+mf bird.jpg 3A
+mf bird.jpg 1.234
+mf
+mf bird.jpg
+mf bird.jpg 3465 x
+ls
+md
+md ..
+md #birds
+md bird bird bird
+ls
+mf bird1.jpg 3465
+mf bird2.jpg 986521
+md bird
+ls
+cd ..
+cd bird is the word
+ls bird1.jpg bird2.jpg
+ls     bird1.jpg
+rm
+rm bird1.jpg bird2.jpg
+mv bird1.jpg
+mv bird1.jpg a b
+cp bird1.jpg
+cp bird1.jpg a      b c
+cp     bird1.jpg a.jpg
+ls
+find all
+exit

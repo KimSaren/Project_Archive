@@ -1,0 +1,17 @@
+Welcome to SOS.
+/>/>/pics/>/pics/>/pics/cats/>/pics/cats/>/pics/cats/>/pics/cats/>ceiling_cat.gif 3677
+dangerous_kitten.jpg 13432
+/pics/cats/>/pics/>/pics/>/pics/dogs/>Error!
+/pics/dogs/>/pics/dogs/>/>pics/ 2
+/>/>/temp/>/temp/>/temp/>memo.txt 42
+/temp/>Error!
+/temp/>memo_backup.txt 42
+/temp/>/temp/>/>/pics/ 2
+/pics/cats/ 2
+/pics/cats/ceiling_cat.gif 3677
+/pics/cats/dangerous_kitten.jpg 13432
+/pics/dogs/ 1
+/pics/dogs/worlds_ugliest_dog.jpg 118088
+/temp/ 1
+/temp/memo_backup.txt 42
+/>Shell terminated.

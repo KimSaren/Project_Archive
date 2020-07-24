@@ -1,0 +1,27 @@
+/*
+ *Kim Sarén, 415405, TIEP2
+ *
+ *Linebreaker-ohjelma
+ *
+ */
+
+public class LineBreaker {
+   public static void main (String[] args) {
+   //Esitellään muuttujia
+   int leveys;
+   char syote;
+   Final char VALINTA1 = 'y';
+   Final char VALINTA2 = 'n';
+   Final String VIRHE = "Error!";
+   boolean lippu;
+
+      //Aloitetaan varsinainen koodaus
+      system.out.println("Hello! I break lines.");
+      system.out.println("Enter area width.")
+      In.readInt(leveys);
+      if(leveys>=3) {
+      }
+      else
+      
+   }
+}

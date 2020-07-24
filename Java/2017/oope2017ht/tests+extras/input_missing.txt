@@ -1,0 +1,13 @@
+cd missing
+rm missing
+ls missing
+mf a.txt 1
+md temp
+cd missing
+rm missing
+ls missing
+cd temp
+cd missing
+rm missing
+ls missing
+exit
