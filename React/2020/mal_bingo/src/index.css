@@ -77,7 +77,6 @@ footer {
 	border-top-style: solid;
 	border-top-color: black;
 	text-align: center;
-	height: 10vh;
 }
 
 button {
@@ -90,6 +89,10 @@ button {
 	font-size: 1.5rem;
 }
 
+button#random {
+	font-size: 0.9rem;
+}
+
 .buttons {
 	display: flex;
 	margin: 1vh;
@@ -100,7 +103,6 @@ button {
 	display: flex;
 	justify-content: center;
 	border-top-style: solid;
-	height: 75vh;
 }
 
 .item1 {
@@ -166,11 +168,11 @@ div.notices {
 
 div.information-field {
 	background: lightgoldenrodyellow;
-	height: 50vh;
 	border-radius: 1vh;
 	padding-left: 1vw;
 	padding-right: 1vw;
 	border-style: solid;
+	font-size: 0.9rem;
 }
 
 div.list-items {
@@ -179,7 +181,6 @@ div.list-items {
 	border-radius: 1vh;
 	padding-left: 1vw;
 	border-style: solid;
-	height: 75vh;
 }
 
 div#author {
@@ -188,20 +189,21 @@ div#author {
 }
 
 div#bingo-lines {
-	display: grid;
+	display: grid; 
 	grid-template-columns: 33% 33% 33%;
-	grid-template-rows: 20% 60% 20%;
+	grid-template-rows: 25vh 8vh;
 	background: lightgoldenrodyellow;
 	border-radius: 1vh;
 	border-style: solid;
+	margin-bottom: 1vh;
 }
 
 div#b1 {
 	text-align: center;
 	grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
 }
 
 div#b2 {
@@ -209,8 +211,8 @@ div#b2 {
 	text-align: center;
 	grid-column-start: 2;
 	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
 }
 
 div#b3 {
@@ -218,17 +220,23 @@ div#b3 {
 	text-align: center;
 	grid-column-start: 3;
 	grid-column-end: 4;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
 }
 
 div#total-div {
+	position: relative;
 	font-size: 2rem;
 	border-top-style: solid;
 	grid-column-start: 1;
 	grid-column-end: 4;
-	grid-row-start: 3;
-	grid-row-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+p#total {
+	position: absolute;
+	top: -4vh;
 }
 
 div#bingo-header {
@@ -261,6 +269,7 @@ p.emphasize {
 	margin-top: 1vh;
 	font-weight:bold;
 	border-style: solid;
+	width: 25vw;
 }
 
 p#bingo-notices {
@@ -444,7 +453,7 @@ img.head {
 
 	button {
 		height: 5vh;
-		width: 30vw;
+		width: 35vw;
 		border-radius: 6px;
 		color: white;
 		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
@@ -457,7 +466,6 @@ img.head {
 		font-size: 0.9rem;
 		margin-left: 0px;
 		border-bottom-style: solid;
-		height: 60vh;
 	}
 	
 	.item2 {
@@ -474,5 +482,6 @@ img.head {
 		padding: 1vh;
 		padding-left: 1vw;
 		padding-right: 1vw;
+		font-size: 0.5rem;
 	}
 }

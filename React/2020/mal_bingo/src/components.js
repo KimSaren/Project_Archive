@@ -20,7 +20,7 @@ export class Master extends React.Component {
             cellTitles: titles,
             cellImages: images,
             gameMode: "sheet",
-            notice: ''
+            notice: '',
         };
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -87,6 +87,7 @@ export class Master extends React.Component {
     onClickPlay() {
         // The state of the gameMode is swapped
         let new_state = this.state.gameMode === "sheet" ? "play" : "sheet";
+        let bingoLines = this.state.bingoLineMode === "hidden" ? "" : "hidden";
         let warning;
         // We are going to display a confirm message first
         if(new_state === "sheet") {
@@ -102,7 +103,8 @@ export class Master extends React.Component {
             this.setState({
                 cellState: activeArray,
                 cellCrossed: crossArray,
-                gameMode: new_state
+                gameMode: new_state,
+                bingoLineMode: bingoLines,
             });               
         }
     }
@@ -113,15 +115,15 @@ export class Master extends React.Component {
                 <Header />
                 <div className="content">
                     <div className = "item1">
-                        <InformationField />
+                        <InformationField mode={this.state.gameMode} />
                         <Buttons onClickPlay={this.onClickPlay} />
-                        <BingoLines />
+                        <BingoLines mode={this.state.gameMode} />
                     </div>
                     <div className = "item2">
                         <BingoNotifications />
                         <Form handleSubmit={this.handleSubmit} />
                         <Table cellState={this.state.cellState} cellCrossed={this.state.cellCrossed} cellTitles={this.state.cellTitles} cellImages={this.state.cellImages} handleClick={this.handleClick} gameMode={this.state.gameMode} />
-                        <Notices value={this.state.notice} />
+                        <Notices value={this.state.notice} mode={this.state.noticeMode} />
                     </div>
                     <div className = "item3">
                         <List cellState={this.state.cellState} cellCrossed={this.state.cellCrossed} cellTitles={this.state.cellTitles} />
@@ -143,16 +145,25 @@ class Header extends React.Component {
 
 class InformationField extends React.Component {
     render() {
+        let p1, p2, p3, title;
+        if(this.props.mode === "sheet") {
+            title = "General information"
+            p1 = "To fill your bingo sheet, simply choose a cell and start typing on the searchbar. Selecting an option presented in the list will fill the cell with the corresponding selection.";
+            p2= "The currently selected tile will be highligted as red. Clicking the tile again will undo your selection. Please note that you cannot change the \"free space\" in the middle.";
+            p3 = "Use the buttons below to help you format your table and start the game when you feel ready.";
+        }
+        else {
+            title = "How to play"
+            p1 = "To play the game, simply click on a cell to mark it as crossed. Click it again to uncross it. Each consistent horizontal, vertical or diagonal line of crosses will count as a bingo. The free space in the middle can always be crossed.";
+            p2 = "You can use the button below to return back to filling the bingo sheet. Note, however, that this will reset your current progress.";
+            p3 = "Have fun!";
+        }
         return(
             <div className="information-field">
-                <h2 id = "information-header"><u><b>General information</b></u></h2>
-                <p className = "information-paragraph">To fill your bingo sheet, simply choose a cell and start typing on the searchbar. 
-                    Selecting an option presented in the list will fill the cell with the corresponding selection.</p>
-                <p className = "information-paragraph">The currently selected tile will be highligted as red. Clicking the tile again will undo your selection. Please note that you cannot change the "free space" in the middle.</p>
-                <p className = "information-paragraph">Use the buttons below to help you format your table and start the game when you feel ready.</p>
-                <p className = "information-paragraph hidden">To play the game, simply click on a cell to mark it as crossed. Click it again to uncross it. Each consistent horizontal, vertical or diagonal line of crosses will count as a bingo. The free space in the middle can always be crossed.</p>
-                <p className = "information-paragraph hidden">You can use the button below to return back to filling the bingo sheet. Note, however, that this will reset your current progress.</p>
-                <p className = "information-paragraph hidden">Have fun!</p>
+                <h2 id = "information-header"><u><b>{title}</b></u></h2>
+                <p className = "information-paragraph">{p1}</p>
+                <p className = "information-paragraph">{p2}</p>
+                <p className = "information-paragraph">{p3}</p>
             </div>
         );
         
@@ -182,34 +193,34 @@ class Buttons extends React.Component {
 
 class BingoLines extends React.Component {
     render() {
-        return(
-            <div id = "bingo-lines" className = "hidden">
-                <div id = "bingo-header">
-                    <h4><b><u>Bingo lines</u></b></h4>
+        if(this.props.mode === "play") {
+            return(
+                <div id = "bingo-lines">
+                    <div id = "b1" className = "bingo-items">
+                        <p className = "bingo-options">1-5</p>
+                        <p className = "bingo-options">6-10</p>
+                        <p className = "bingo-options">11-15</p>
+                        <p className = "bingo-options">16-20</p>
+                    </div>
+                    <div id = "b2" className = "bingo-items">
+                        <p className = "bingo-options">21-25</p>
+                        <p className = "bingo-options">1,6,11,16,21</p>
+                        <p className = "bingo-options">2,7,12,17,22</p>
+                        <p className = "bingo-options">3,8,13,18,23</p>
+                    </div>
+                    <div id = "b3" className = "bingo-items">
+                        <p className = "bingo-options">4,9,14,19,24</p>
+                        <p className = "bingo-options">5,10,15,20,25</p>
+                        <p className = "bingo-options">1,7,13,19,25</p>
+                        <p className = "bingo-options">5,9,13,17,21</p>
+                    </div>
+                    <div id = "total-div">
+                        <p id = "total">Total: 0</p>
+                    </div>
                 </div>
-                <div id = "b1" className = "bingo-items">
-                    <p className = "bingo-options">1-5</p>
-                    <p className = "bingo-options">6-10</p>
-                    <p className = "bingo-options">11-15</p>
-                    <p className = "bingo-options">16-20</p>
-                </div>
-                <div id = "b2" className = "bingo-items">
-                    <p className = "bingo-options">21-25</p>
-                    <p className = "bingo-options">1,6,11,16,21</p>
-                    <p className = "bingo-options">2,7,12,17,22</p>
-                    <p className = "bingo-options">3,8,13,18,23</p>
-                </div>
-                <div id = "b3" className = "bingo-items">
-                    <p className = "bingo-options">4,9,14,19,24</p>
-                    <p className = "bingo-options">5,10,15,20,25</p>
-                    <p className = "bingo-options">1,7,13,19,25</p>
-                    <p className = "bingo-options">5,9,13,17,21</p>
-                </div>
-                <div id = "total-div">
-                    <p id = "total">Total: 0</p>
-                </div>
-            </div>
-        );
+            );
+        }
+        return null;
     }
 }
 
@@ -273,7 +284,7 @@ class Form extends React.Component {
 
     inputHandler(e) {
         e.preventDefault();
-        let input = document.getElementById("searchbar").value;
+        let input = this.state.value;
         let datalist = document.getElementById("searchresults").childNodes;
         document.getElementById("searchbar").innerHTML = '';
         for(let i = 0; i < datalist.length; ++i) {
