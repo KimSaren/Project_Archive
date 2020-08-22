@@ -43,12 +43,12 @@ export class Form extends React.Component {
     inputHandler(e) {
         e.preventDefault();
         let input = this.state.value;
-        let datalist = document.getElementById("searchresults").childNodes;
-        document.getElementById("searchbar").innerHTML = '';
-        for(let i = 0; i < datalist.length; ++i) {
-            if(datalist[i].value === input) {
-                let title = datalist[i].value;
-                let image = datalist[i].getAttribute('url');
+        let data = this.state.data;
+        this.setState({value: ''});
+        for(const key in data) {
+            if(data[key]["title"] === input) {
+                let title = data[key]["title"];
+                let image = data[key]["img_url"];
                 this.setState({data: [], value: ''});  
                 this.props.handleSubmit(title,image);   
             }
@@ -56,14 +56,17 @@ export class Form extends React.Component {
     }
 
     render() {
-        return(
-            <div>
-                <form name = "anime-search" id = "anime-search" onSubmit={this.inputHandler} >
-                    <label htmlFor = "searchbar" className = "item">Title search:</label>
-                    <input type = "text" id = "searchbar" list = "searchresults" value={this.state.value} onChange={this.formHandler} />
-                    <datalist id = "searchresults">{this.state.data.map((item) => <option key={item["title"]} value={item["title"]} url={item["img_url"]} />)}</datalist>
-                </form>
-            </div>
-        );
+        if(this.props.mode === "sheet") {
+            return(
+                <div>
+                    <form name = "anime-search" id = "anime-search" onSubmit={this.inputHandler} >
+                        <label htmlFor = "searchbar" className = "item">Title search:</label>
+                        <input type = "text" id = "searchbar" list = "searchresults" value={this.state.value} onChange={this.formHandler} />
+                        <datalist id = "searchresults" >{this.state.data.map((item) => <option key={item["title"]} value={item["title"]} url={item["img_url"]} />)}</datalist>
+                    </form>
+                </div>
+            );
+        }
+        return <h1>Play mode</h1>;
     }
 }

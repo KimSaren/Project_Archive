@@ -93,6 +93,10 @@ button#random {
 	font-size: 0.9rem;
 }
 
+button#sheet {
+	font-size: 0.9rem;
+}
+
 .buttons {
 	display: flex;
 	margin: 1vh;
@@ -159,24 +163,29 @@ div.header {
 
 div.notices {
 	position: relative;
-	width: 35vw;
 	margin-right: auto;
 	margin-left: auto;
 	background: lightgoldenrodyellow;
 	border-radius: 3px;
+	margin-right: 1vw;
 }
 
 div.information-field {
 	background: lightgoldenrodyellow;
+	width: 90%;
 	border-radius: 1vh;
 	padding-left: 1vw;
 	padding-right: 1vw;
 	border-style: solid;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1vh;
 	font-size: 0.9rem;
 }
 
 div.list-items {
 	background: lightgoldenrodyellow;
+	width: 90%;
 	margin-top: 0.5vh;
 	border-radius: 1vh;
 	padding-left: 1vw;
@@ -189,7 +198,7 @@ div#author {
 }
 
 div#bingo-lines {
-	display: grid; 
+	display: grid;
 	grid-template-columns: 33% 33% 33%;
 	grid-template-rows: 25vh 8vh;
 	background: lightgoldenrodyellow;
@@ -412,6 +421,24 @@ img.head {
 		font-size: 0.9rem;
 		width: 90%;
 		height: auto;
+	}
+
+	div.information-field {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div#bingo-lines {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div.list-items {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.content {
