@@ -68,6 +68,13 @@ export class BingoLines extends React.Component {
                 </div>
             );
         }
-        return null;
+        return(
+            <div id = "buttons">
+                <h2><b><u>Button functionality</u></b></h2>
+                <p><b>Play:</b> switches the game to playing mode. The functionalities of the table and the UI of the application will change.</p>
+                <p><b>Randomize:</b> randomizes the positions of <i>currently</i> selected titles in the table. Free space remains unchanged.</p>
+                <p><b>Clear:</b> clears all current selections. Good for a quick reset.</p>
+            </div>
+        );
     }
 }

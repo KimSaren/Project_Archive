@@ -7,10 +7,13 @@ export class List extends React.Component {
         array.length = 25;
         for(let i = 0; i < 25; ++i) {
             if(i !== 12) {
-                array[i] = <ListItem key={i} active={this.props.cellState[i]} title={this.props.cellTitles[i]} />;
+                array[i] = <ListItem key={i} active={this.props.cellState[i]} title={this.props.cellTitles[i]} crossed={this.props.cellCrossed[i]} />;
             }
             else {
-                array[i] = <li key="12" id="reserved" className="rainbow">Free space</li>;
+                if(this.props.cellCrossed[12] === 0)
+                    array[i] = <li key="12" id="reserved" className="rainbow">Free space</li>;
+                else
+                    array[i] = <li key="12" id="reserved" className="rainbow strikethrough">Free space</li>;
             }
         }
         return(

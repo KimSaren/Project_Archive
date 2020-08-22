@@ -183,6 +183,19 @@ div.information-field {
 	font-size: 0.9rem;
 }
 
+div#buttons {
+	background: lightgoldenrodyellow;
+	width: 90%;
+	border-radius: 1vh;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	border-style: solid;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1vh;
+	font-size: 0.9rem;
+}
+
 div.list-items {
 	background: lightgoldenrodyellow;
 	width: 90%;
@@ -427,6 +440,11 @@ img.head {
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	div#buttons {
+		background: lightgoldenrodyellow;
+		width: 80%;
 	}
 
 	div#bingo-lines {

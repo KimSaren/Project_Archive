@@ -2,10 +2,13 @@ import React from 'react';
 
 export class ListItem extends React.Component {
     render() {
-        let state = '';
+        let state = '', strike = '';
         if(this.props.active === 1) {
             state = 'active-item';
         }
-    return <li id={state}>{this.props.title}</li>;
+        else if(this.props.crossed === 1) {
+            strike = 'strikethrough';
+        }
+    return <li id={state} className={strike}>{this.props.title}</li>;
     }
 }
