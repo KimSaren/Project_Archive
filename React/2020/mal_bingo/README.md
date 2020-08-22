@@ -55,3 +55,5 @@ This application might see some changes in the future. Bugs will be fixed if fou
 but I might be inclined to do some changes to both visual and technical functionalities
 along the line if I feel like it. This application was made with [Javascript](https://www.javascript.com/) and in
 particular using the [React](https://reactjs.org/) library. The styling was done using Cascading Stylesheets.
+
+This application is also being hosted on [Surge](http://bingobongo.surge.sh/). Try it out if you wanna.
