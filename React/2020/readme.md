@@ -1,13 +1,12 @@
 ## Main projects
 
 ### mal_bingo
-![Filling mode](https://imgur.com/xGUwVXl.png)
 ![Play mode](https://imgur.com/NUmG96O.png)
 A bingo application I derived from my old work done purely with html/css/javascript. It's a pretty extensive one featuring interaction with an API, simple game mechanics and
 pretty hefty logics for changing the state of the game at a given point. I did this from scratch, including the visuals. This application behaves nicely in mobile, except for datalist which is not supported in all mobile browsers.
 
 ### Jammming
-![Jamming](https://imgur.com/fltCBZA)
+![Jamming](https://imgur.com/fltCBZA.png)
 A playlist saving application done in tandem with the Spotify WEB API. A pretty extensive project from codeacademy.
 
 ## Minor work
