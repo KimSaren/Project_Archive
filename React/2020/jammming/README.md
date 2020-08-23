@@ -1,13 +1,23 @@
 # Jammming
 
-## The short description
-An application based on the Spotify WEB API. It features a searchbar and two separate lists:
-one for the search results and another for a customised playlist the user can build with the
-songs in the database.
+![Jamming](https://imgur.com/fltCBZA.png)
 
-The application is done in a manner, that it directly references to the official Spotify WEB API
-and get appropriate permissions by linking the user to an authorization prompt by Spotify.
-This allows the application to not only view the Spotify song database, but also add new public playlists
-of songs to the users Spotify account.
+## Basic 101
 
-The instructions for this exercise are from codeacademy pro.
+This is a React-based application that interacts with the [Spotify web API](https://developer.spotify.com/documentation/web-api/). The main function of this application is to let the user search for songs and artists in the Spotify database and add them to a custom playlist. The user can also save this playlist to their personal Spotify user.
+
+## How does it work
+
+The application consists of a few key elements:
+
+* The search bar, which allows the user to search through the Spotify database
+* Results bar that shows the matches for current search
+* Custom playlist containing the songs the user has added through the results
+
+A song can be added to the playlist by clicking the "**+**" icon next to the song on the results and removed by clicking the "**-**" icon on the custom playlist. The playlist can be renamed using the name field above the list.
+
+Since this application directly interacts with the users' Spotify profile, it needs proper [authentication](https://developer.spotify.com/documentation/general/guides/authorization-guide/) to function.
+
+## Closing words
+
+This application was done with guidance from [Codeacademy](https://www.codecademy.com/learn). The instruction were rather light at places, so I feel like this was good practice for me nevertheless. In particular this program really helped me see the value of using componential design and overall practice working with authorization-requiring APIs.
