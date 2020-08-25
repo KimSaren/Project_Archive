@@ -50,6 +50,9 @@ These will be striked through in the bingo line list as appropriate.
 button in the bottom. This will prompt the user to confirm the mode change. Crosses will be
 resetted upon doing so.
 
+## Known issues
+* Datalist is not supported in all mobile browsers
+
 ## Closing words
 This application might see some changes in the future. Bugs will be fixed if found,
 but I might be inclined to do some changes to both visual and technical functionalities
