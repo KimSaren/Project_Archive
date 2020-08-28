@@ -24,7 +24,7 @@ ones we would hear in the span of the evening.
 This is the initial mode of the application. The basic functionalities are as follows:
 * Selecting active cells in the bingo table by clicking them once
 * Adding series to active cells via searchbar: the search will prompt a datalist the user
-can use to select an appropriate series.
+can use to select a title. The title will then be added to the table upon hitting the enter key.
 * Replacing added series by overwriting them with new series. The free zone in the middle cannot
 be replaced.
 * Using the buttons provided under the bingo: play, randomize and clear.
