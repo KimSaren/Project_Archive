@@ -7,8 +7,8 @@
 
 This is a React-based bingo application that utilizes the JIKAN web API.
 The application has two major functions: first is filling the bingo sheet
-with appropriate series using a list of options provided by JIKAN. The second is
-to function as a bingo game. In this mode the player gets to cross the series
+with appropriate titles using a list of options provided by JIKAN. The second is
+to function as a bingo game. In this mode the player gets to cross the titles
 by clicking the table cells. Consistent horizontal, vertical and diagonal lines
 count as bingos.
 
@@ -23,9 +23,9 @@ ones we would hear in the span of the evening.
 
 This is the initial mode of the application. The basic functionalities are as follows:
 * Selecting active cells in the bingo table by clicking them once
-* Adding series to active cells via searchbar: the search will prompt a datalist the user
+* Adding titles to active cells via searchbar: the search will prompt a datalist the user
 can use to select a title. The title will then be added to the table upon hitting the enter key.
-* Replacing added series by overwriting them with new series. The free zone in the middle cannot
+* Replacing added titles by overwriting them with new titles. The free zone in the middle cannot
 be replaced.
 * Using the buttons provided under the bingo: play, randomize and clear.
 
@@ -34,10 +34,10 @@ The functionalities of the buttons are as follows:
 gives the user a prompt asking whether they are ready to start playing. Upon confirmation,
 the state of the application changes to represent the play mode. The active states of cells will
 be reset upon doing so, as the clicking functionality will change.
-* The randomize button randomizes the selected series in the bingo. This means only the series
-you have selected through the search bar! Hence it will **not** fill your list with random series,
+* The randomize button randomizes the selected titles in the bingo. This means only the titles
+you have selected through the search bar! Hence it will **not** fill your list with random titles,
 if you have empty slots. The free space in the middle will never be randomized.
-* The clear button simply clears all the selected series in the bingo. Use this if you want
+* The clear button simply clears all the selected titles in the bingo. Use this if you want
 a quick reset and to start over.
 
 ### Playing the bingo
