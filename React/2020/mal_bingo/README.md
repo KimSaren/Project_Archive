@@ -7,7 +7,7 @@
 
 This is a React-based bingo application that utilizes the JIKAN web API.
 The application has two major functions: first is filling the bingo sheet
-with appropriate titles using a list of options provided by JIKAN. The second is
+with appropriate anime titles using a list of options provided by JIKAN. The second is
 to function as a bingo game. In this mode the player gets to cross the titles
 by clicking the table cells. Consistent horizontal, vertical and diagonal lines
 count as bingos.
