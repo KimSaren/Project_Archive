@@ -39,9 +39,19 @@ export class TableCell extends React.Component {
             return <td id="reserved" onClick={this.clickEvent}><div className="text-container"><img src={require('../images/umr.jpg')} className="image1" alt="preset" /><div className="top-left">{this.props.number}.</div></div></td>;
         }
         
-        if(this.props.cellCrossed === 1) {
-            return <td id={state} onClick={this.clickEvent}><div className="text-container"><img src={this.props.cellImage} className="image1" alt="" /><img src={require('../images/x_3.png')} className="image2" alt="marked" /><div className="top-left">{this.props.number}.</div></div></td>;
+        // If an image link has been passed down, we will render a table cell with an <img> element
+        if(this.props.cellImage !== '') {
+            if(this.props.cellCrossed === 1) {
+                return <td id={state} onClick={this.clickEvent}><div className="text-container"><img src={this.props.cellImage} className="image1" alt="" /><img src={require('../images/x_3.png')} className="image2" alt="marked" /><div className="top-left">{this.props.number}.</div></div></td>;
+            }
+            return <td id={state} onClick={this.clickEvent}><div className="text-container"><img src={this.props.cellImage} className="image1" alt="" /><div className="top-left">{this.props.number}.</div></div></td>;
         }
-        return <td id={state} onClick={this.clickEvent}><div className="text-container"><img src={this.props.cellImage} className="image1" alt="" /><div className="top-left">{this.props.number}.</div></div></td>;
+        // Else we will render it without said element to avoid null images in the final product
+        else {
+            if(this.props.cellCrossed === 1) {
+                return <td id={state} onClick={this.clickEvent}><div className="text-container"><img src={require('../images/x_3.png')} className="image2" alt="marked" /><div className="top-left">{this.props.number}.</div></div></td>;
+            }
+            return <td id={state} onClick={this.clickEvent}><div className="text-container"><div className="top-left">{this.props.number}.</div></div></td>;
+        }
     }
 }
