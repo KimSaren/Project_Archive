@@ -1,7 +1,7 @@
 # Project_Archive
 
 This archive includes various projects and bigger works done using different programming
-languages. My thesis for Bachelor's degree and Master's Degree are also 
+languages. My thesises for Bachelor's and Master's Degree are also 
 included for reference.
 
 The works are categorised first by their programming language and then by the year
